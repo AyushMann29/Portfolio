@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./aboutMe.css";
 import { motion } from "framer-motion";
 import { FaCode, FaLaptopCode, FaServer, FaDatabase, FaMobileAlt, FaLeaf, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import AyushImg from "../assets/ayush.png"; // Replace with your actual image path
+
 
 function AboutMe() {
   const [scrollY, setScrollY] = useState(0);
@@ -109,20 +111,20 @@ function AboutMe() {
           <div className="avatarContainer">
             <div className="avatar">
               {/* Replace with your actual image */}
-              <img src="https://via.placeholder.com/150" alt="Ayush Mann" className="avatarImg" />
+              <img src={AyushImg} alt="Ayush Mann" className="avatarImg" />
             </div>
             <div className="avatarBackground" />
           </div>
           
           <div className="bioText">
-            <h2>Hi, I'm Ayush Mann</h2>
+            <h2>Hi, I'm Ayush Mann (Aesthestics to Creative)</h2>
             <p>
               I'm a passionate Computer Science Engineering student at Vellore Institute of Technology, 
               focused on creating engaging and innovative web experiences. My journey in programming 
               started with curiosity and has evolved into a deep love for building digital solutions.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source,
+              When I'm not coding, you can find me exploring new technologies, contributing to open-source, playing video games,
               or working on my YouTube channel sharing technical insights with the community.
             </p>
           </div>
