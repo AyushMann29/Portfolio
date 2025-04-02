@@ -1,0 +1,156 @@
+.projects {
+    position: relative; /* This allows child elements to use absolute positioning */
+    width: 100%;        /* Ensure full width of the parent container */
+    height: 100dvh;      /* Full viewport height */
+    overflow: hidden;
+  }
+
+
+  
+  .center {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  #cloudShape {
+    background: rgba(255, 255, 255);
+    width: 300px; 
+    height: 100px;
+    border-radius: 150px;	
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    animation: move 3s infinite;
+  }
+  
+  #cloudShape:after {
+    content: '';
+    background: rgba(255, 255, 255);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -50px;
+    left: 50px;
+  }
+  
+  #cloudShape:before {
+    content: '';
+    background: rgba(255, 255, 255);
+    position: absolute;
+    width: 170px;
+    height: 150px;
+    border-radius: 50%;
+    top: -90px;
+    right: 40px;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translatex(0);
+    }
+    50% {
+      transform: translatex(-40px);
+    }
+  }
+    
+  #cloudHeading{
+    position: absolute;
+    top: -55%;
+    left: 30%;
+    font-size: 1.7em;
+    color: #323456;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  #cloudContent{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 1em;
+    color: #396B89;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  }
+  
+  #cloudShape{
+      position: relative;
+      margin:25dvh;
+  }
+
+  .cloud2{
+    position: relative;
+    left:30%;
+  }
+
+  .cloud4{
+    position: relative;
+    left:30%;
+  }
+    
+  .leftSideProjects{
+    transition: transform 0.5s ease;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0;
+    background: linear-gradient(to bottom, #e6f0ff, #b3d1ff, #80bfff, #4d94ff);
+
+  }
+  
+  .rightSideProjects{
+    transition: transform 0.5s ease;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0;
+    left: 50%;
+    background: linear-gradient(to bottom, #e6f0ff, #b3d1ff, #80bfff, #4d94ff);
+
+  }
+  
+  .rightSideProjects.shift {
+    transform: translateX(100%); /* Adjust the value as needed */
+  }
+  .leftSideProjects.shift {
+    transform: translateX(-100%); /* Adjust the value as needed */
+  }
+
+  .leftViewMoreButton,
+  .rightViewMoreButton {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  
+    background: linear-gradient(to right, #003cff, #005ce6); /* brighter and deeper blues */
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+  
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  
+  .leftViewMoreButton {
+    margin-top: 20px;
+  }
+  
+  .rightViewMoreButton {
+    margin-top: 20px;
+  }
+  
+  .leftViewMoreButton:hover,
+  .rightViewMoreButton:hover {
+    background: linear-gradient(to right, #002db3, #0033cc); /* darker on hover */
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+  

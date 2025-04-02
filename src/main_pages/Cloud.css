@@ -1,0 +1,80 @@
+#cloud {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0;
+}
+
+/* CLOUD BASE SHAPE */
+#cloudShape {
+  width: clamp(40vw, 50vw, 60vw);
+  height: clamp(10vh, 20vh, 25vh);
+  background: linear-gradient(#f2f9fe 5%, #d6f0fd 100%);
+  border-radius: 50%;
+  position: relative;
+}
+
+/* BUMPS (RESPONSIVE) */
+#cloudShape::after,
+#cloudShape::before {
+  content: "";
+  position: absolute;
+  background: #f2f9fe;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+#cloudShape::after {
+  width: 30%;
+  height: 60%;
+  top: -25%;
+  left: 25%;
+}
+
+#cloudShape::before {
+  width: 45%;
+  height: 80%;
+  top: -55%;
+  right: 10%;
+}
+
+/* SHADOW */
+.shadow {
+  width: 80%;
+  height: 5vh;
+  position: absolute;
+  bottom: -10px;
+  left: 10%;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+  z-index: -2;
+}
+
+/* TEXT INSIDE CLOUD */
+#cloudHeading {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: #323456;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  max-width: 90%;
+}
+
+#cloudContent {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: #396B89;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  max-width: 90%;
+}

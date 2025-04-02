@@ -1,0 +1,39 @@
+/* Base styles for the app container */
+.App {
+  position: relative;
+  overflow-y: visible;
+}
+
+/* Styles for sections that should snap */
+.snap-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style for the AboutMe section that should scroll normally */
+.scrollable-section {
+  min-height: 100vh; /* At least 100vh, but can be taller */
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure the body doesn't have any unexpected margins */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional styling for better visual separation between sections */
+#home {
+  z-index: 1;
+}
+
+#projects {
+  z-index: 2;
+}
+
+#aboutMe {
+  z-index: 3;
+}

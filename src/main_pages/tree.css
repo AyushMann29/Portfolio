@@ -1,0 +1,58 @@
+.Tree {
+    width: 10vw;                /* was 20vw */
+    height: 20vw;               /* was 40vw */
+    position: relative;
+    transform-origin: bottom;
+    animation: treeShake 3s infinite linear;
+    margin: 0 auto;
+  }
+  
+  .trunk {
+    position: absolute;
+    width: 2.2vw;               /* was 5vw */
+    height: 8vw;               /* was 30vw */
+    bottom: 0;
+    left: 3.9vw;                /* centered in 10vw */
+    background: hsl(20deg, 80%, 25%);
+    border-radius: 0.5vw;
+    z-index: 1;
+  }
+  
+  .leaves {
+    position: absolute;
+    width: 6vw;                 /* was 20vw */
+    height: 6vw;
+    left: 2vw;                  /* center-adjusted */
+    bottom: 7vw;
+    border-radius: 50%;
+    background: hsl(120deg, 80%, 65%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .tree-icon {
+    font-size: 2.2vw;           /* was 6vw */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .tree-icon:hover {
+    transform: scale(1.2);
+    color: #000;
+  }
+  
+  @keyframes treeShake {
+    0% {
+      transform: skewX(3deg);
+    }
+    50% {
+      transform: skewX(-3deg);
+    }
+    100% {
+      transform: skewX(3deg);
+    }
+  }
+  

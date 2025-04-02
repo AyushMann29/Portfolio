@@ -1,0 +1,291 @@
+.Home {
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+  
+  /* Left Side */
+  .leftSide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(135deg, #444444, #101010);
+    position: relative;
+  }
+  
+  .leftHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 20%;
+  }
+  
+  #Ayush,#Mann {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #ededed;
+    margin-right: 1rem;
+    transition: all 1s ease;
+    opacity: 1;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 0.05em;
+  }
+
+  
+  #Ayush,#Mann {
+    animation: glowPulse 3s ease-in-out infinite;
+    color: #ededed;
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      text-shadow: 0 0 5px #da0037, 0 0 10px #da0037;
+    }
+    50% {
+      text-shadow: 0 0 15px #da0037, 0 0 30px #ff4b5c;
+    }
+    100% {
+      text-shadow: 0 0 5px #da0037, 0 0 10px #da0037;
+    }
+  }
+  
+  
+  #webDev,
+  #gameDev,
+  #youtuber {
+    font-size: 6rem;
+    font-weight: 700;
+    min-width: 100%;
+    background: #da0037;
+    color: #ededed;
+    margin: 1rem 0;
+    z-index: 1;
+    transition: 0.5s;
+    text-align: center;
+  }
+  
+  #overlay {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    height: 0%;
+    transition: 0.3s ease;
+  }
+  
+  .active {
+    border: 2px solid #ffffff99;
+    box-shadow: 0 0 10px #ffffff88;
+  }
+  
+  #webDev:hover #overlay,
+  #gameDev:hover #overlay,
+  #youtuber:hover #overlay {
+    height: 40%;
+  }
+  
+  
+  #webDev:hover,
+  #gameDev:hover,
+  #youtuber:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+  
+  
+  /* Right Side */
+  .rightSide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(135deg, #171717, #000000);
+    position: relative;
+  }
+  
+  .rightHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20%;
+  }
+  
+  #Mann {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #ededed;
+    margin-left: 1rem;
+    transition: all 1s ease;
+  }
+  
+  .logo {
+    position: relative;
+    max-width: 50%;
+    height: auto;
+  }
+  
+  #logoImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* --------------------------------------------- */
+  /* ✅ Responsive Styles for Mobile Screens */
+  /* --------------------------------------------- */
+  @media (max-width: 768px) {
+    .Home {
+      flex-direction: column;
+    }
+  
+    .leftSide,
+    .rightSide {
+      width: 100%;
+      height: 50vh;
+    }
+  
+    #Ayush,
+    #Mann {
+      font-size: 3.5rem;
+    }
+  
+    #webDev,
+    #gameDev,
+    #youtuber {
+      font-size: 2.5rem;
+    }
+  
+    .leftHeader,
+    .rightHeader {
+      justify-content: center;
+      height: auto;
+      padding: 1rem 0;
+    }
+  
+    #Ayush {
+      margin-right: 0;
+    }
+  
+    #Mann {
+      margin-left: 0;
+    }
+  }
+  
+  .scrollPrompt {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .professionDisplay {
+    font-size: 2.5rem;
+    color: #ededed;
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  .professionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .professionImage {
+    width: 60vmin; /* scales with screen size */
+    height: 60vmin;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ffffff33;
+    box-shadow: 0 0 25px 8px rgba(255, 255, 255, 0.6);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  
+  /* Add this to your CSS file */
+
+.scrollLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-weight: 500;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.scrollLink:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.scrollLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.scrollLink:hover:before {
+  transform: translateX(100%);
+}
+
+.scrollLink:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated down arrow */
+.scrollLink::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin-left: 8px;
+  transform: rotate(45deg);
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-3px) rotate(45deg);
+  }
+}

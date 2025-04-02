@@ -1,0 +1,846 @@
+.aboutMeSection {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #4d94ff, #2074f0);
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 80vh 0; /* Extra padding for content and contact section */
+  }
+  
+  /* Sun */
+  .sun {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background: #ffd738;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(255, 215, 56, 0.7);
+    z-index: 1;
+  }
+  
+  .sunRays {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, transparent 40%, rgba(255, 215, 56, 0.1) 70%);
+    border-radius: 50%;
+    animation: pulsate 4s infinite ease-in-out;
+  }
+  
+  @keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Clouds */
+  .cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+  }
+  
+  .cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+  }
+  
+  .cloud1 {
+    width: 120px;
+    height: 60px;
+    top: 100px;
+    left: 15%;
+  }
+  
+  .cloud1:before {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    left: 20px;
+  }
+  
+  .cloud1:after {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    right: 25px;
+  }
+  
+  .cloud2 {
+    width: 150px;
+    height: 75px;
+    top: 160px;
+    right: 20%;
+  }
+  
+  .cloud2:before {
+    width: 90px;
+    height: 90px;
+    top: -40px;
+    left: 25px;
+  }
+  
+  .cloud2:after {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    right: 30px;
+  }
+  
+  .cloud3 {
+    width: 100px;
+    height: 50px;
+    top: 220px;
+    left: 35%;
+  }
+  
+  .cloud3:before {
+    width: 60px;
+    height: 60px;
+    top: -25px;
+    left: 15px;
+  }
+  
+  .cloud3:after {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    right: 20px;
+  }
+  
+  /* Mountains for parallax */
+  .mountains {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    bottom: 50vh; /* Position above ground and contact section */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 1;
+  }
+  
+  .mountainBack {
+    background-image: radial-gradient(ellipse at 50% 100%, #305c1e 0%, #305c1e 30%, transparent 30%);
+    background-size: 200% 100%;
+    opacity: 0.6;
+    height: 25vh;
+    bottom: 52vh;
+  }
+  
+  .mountainMiddle {
+    background-image: radial-gradient(ellipse at 25% 100%, #305c1e 0%, #305c1e 25%, transparent 25%), 
+                      radial-gradient(ellipse at 75% 100%, #305c1e 0%, #305c1e 30%, transparent 30%);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    height: 28vh;
+    bottom: 51vh;
+  }
+  
+  .mountainFront {
+    background-image: radial-gradient(ellipse at 15% 100%, #305c1e 0%, #305c1e 20%, transparent 20%), 
+                      radial-gradient(ellipse at 50% 100%, #305c1e 0%, #305c1e 40%, transparent 40%),
+                      radial-gradient(ellipse at 85% 100%, #305c1e 0%, #305c1e 25%, transparent 25%);
+    background-size: 100% 100%;
+    height: 30vh;
+    bottom: 50vh;
+  }
+  
+  /* Ground */
+  .aboutGround {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30vh;
+    background: #305c1e;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    z-index: 2;
+  }
+  
+  .grass {
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    height: 30px;
+    background-image: 
+      radial-gradient(circle at 10% 0, transparent 0, transparent 60%, #3a7024 60%, #3a7024 100%),
+      radial-gradient(circle at 30% 0, transparent 0, transparent 60%, #3a7024 60%, #3a7024 100%),
+      radial-gradient(circle at 50% 0, transparent 0, transparent 60%, #3a7024 60%, #3a7024 100%),
+      radial-gradient(circle at 70% 0, transparent 0, transparent 60%, #3a7024 60%, #3a7024 100%),
+      radial-gradient(circle at 90% 0, transparent 0, transparent 60%, #3a7024 60%, #3a7024 100%);
+    background-size: 50px 30px;
+    background-repeat: repeat-x;
+  }
+  
+  .aboutTag {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Content container */
+  .aboutContentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 0;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .aboutTitle {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Bio section */
+  .bioContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .avatarContainer {
+    position: relative;
+    flex: 0 0 200px;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    position: relative;
+    z-index: 2;
+    background: #f0f0f0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatarBackground {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 170px;
+    height: 170px;
+    background: hsl(120deg, 80%, 65%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .bioText {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .bioText h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .bioText p {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Skills section with improved trees */
+  .skillsSection {
+    margin-bottom: 4rem;
+  }
+  
+  .skillsSection h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .skillsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .skillTree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 220px;
+    position: relative;
+  }
+  
+  /* Improved tree trunk with details */
+  .skillTrunk {
+    width: 24px;
+    height: 100px;
+    background: linear-gradient(to right, #3b2f2f 0%, #5d4037 50%, #3b2f2f 100%);
+    border-radius: 6px;
+    position: absolute;
+    bottom: 40px;
+    z-index: 1;
+    transform: perspective(200px) rotateX(5deg);
+    box-shadow: -2px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Tree trunk details */
+  .trunkDetail {
+    position: absolute;
+    background: #2d2320;
+    border-radius: 10px;
+  }
+  
+  .trunkDetail1 {
+    width: 10px;
+    height: 5px;
+    top: 20px;
+    left: -2px;
+    transform: rotate(30deg);
+  }
+  
+  .trunkDetail2 {
+    width: 8px;
+    height: 4px;
+    top: 50px;
+    right: -2px;
+    transform: rotate(-20deg);
+  }
+  
+  /* Tree roots */
+  .skillRoots {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 20px;
+    z-index: 0;
+  }
+  
+  .root {
+    position: absolute;
+    background: #3b2f2f;
+    height: 6px;
+    border-radius: 3px;
+    transform-origin: center top;
+  }
+  
+  .root1 {
+    width: 30px;
+    bottom: 0;
+    left: 35px;
+    transform: rotate(40deg);
+  }
+  
+  .root2 {
+    width: 35px;
+    bottom: 5px;
+    left: 50px;
+    transform: rotate(20deg);
+  }
+  
+  .root3 {
+    width: 25px;
+    bottom: 0;
+    left: 57px;
+    transform: rotate(-30deg);
+  }
+  
+  /* Improved tree leaves with multiple bunches */
+  .skillLeafCluster {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 115px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .skillLeafCluster:hover {
+    transform: scale(1.05);
+  }
+  
+  .leafBunch {
+    position: absolute;
+    background: hsl(120deg, 80%, 65%);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .leafBunch1 {
+    width: 70px;
+    height: 70px;
+    bottom: 0;
+    left: 10px;
+    background: hsl(120deg, 80%, 65%);
+    animation: leafSway 3s ease-in-out infinite;
+  }
+  
+  .leafBunch2 {
+    width: 50px;
+    height: 50px;
+    bottom: 35px;
+    left: 0;
+    background: hsl(120deg, 85%, 60%);
+    animation: leafSway 3s ease-in-out infinite 0.5s;
+  }
+  
+  .leafBunch3 {
+    width: 55px;
+    height: 55px;
+    bottom: 35px;
+    right: 0;
+    background: hsl(120deg, 75%, 70%);
+    animation: leafSway 3s ease-in-out infinite 1s;
+  }
+  
+  .skillIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.8rem;
+    z-index: 3;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  }
+  
+  /* Bird on top of tree */
+  .skillBird {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    z-index: 5;
+  }
+  
+  .birdShape {
+    position: relative;
+    width: 12px;
+    height: 8px;
+    background: #333;
+    border-radius: 50% 50% 20% 20%;
+  }
+  
+  .birdShape:before, .birdShape:after {
+    content: '';
+    position: absolute;
+    background: #333;
+  }
+  
+  .birdShape:before {
+    width: 4px;
+    height: 5px;
+    border-radius: 50% 50% 0 0;
+    top: -3px;
+    left: 2px;
+  }
+  
+  .birdShape:after {
+    width: 8px;
+    height: 3px;
+    border-radius: 0 40% 0 0;
+    top: 0;
+    right: -5px;
+    transform: rotate(20deg);
+  }
+  
+  .skillName {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+/* Fix for skill level percentages showing behind trees */
+.skillLevel {
+    position: absolute;
+    bottom: -10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 3; /* Added z-index higher than leaf clusters */
+  }
+  
+  /* Optional: You could also make the position more visible by adjusting it */
+  /* Uncomment this to position the skill level above the leaf clusters instead */
+  /*
+  .skillLevel {
+    bottom: 200px; 
+  }
+  */
+  
+  
+  @keyframes leafSway {
+    0% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+  }
+  
+  /* Education timeline */
+  .educationSection {
+    margin-bottom: 4rem;
+  }
+  
+  .educationSection h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+  
+  .timelinePath {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timelinePath::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+  }
+  
+  .timelineCard {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    position: relative;
+    width: 40%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+  }
+  
+  .timelineCard h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timelineCard p {
+    color: white;
+    line-height: 1.5;
+  }
+  
+  .timelineDate {
+    color: hsl(120deg, 80%, 85%) !important;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    left: 60%;
+  }
+  
+  .timelineDot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid hsl(120deg, 80%, 65%);
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right .timelineDot {
+    left: -13px;
+  }
+  
+  .timelineLeaf {
+    color: hsl(120deg, 80%, 40%);
+    animation: leafSway 3s ease-in-out infinite;
+  }
+  
+  /* Projects section */
+  .projectsHighlight {
+    margin-bottom: 4rem;
+  }
+  
+  .projectsHighlight h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .projectsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .projectCard {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .projectIcon {
+    font-size: 2.5rem;
+    color: hsl(120deg, 80%, 75%);
+    margin-bottom: 1rem;
+  }
+  
+  .projectCard h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectCard p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+  }
+  
+  /* Contact Integration */
+  .contactIntegration {
+    position: absolute;
+    bottom: 30vh;
+    width: 100%;
+    height: 50vh;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
+  
+  .contactHills {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    background-image: 
+      radial-gradient(ellipse at 10% 100%, #3a7024 0%, #3a7024 15%, transparent 15%),
+      radial-gradient(ellipse at 30% 100%, #3a7024 0%, #3a7024 12%, transparent 12%),
+      radial-gradient(ellipse at 50% 100%, #3a7024 0%, #3a7024 18%, transparent 18%),
+      radial-gradient(ellipse at 70% 100%, #3a7024 0%, #3a7024 14%, transparent 14%),
+      radial-gradient(ellipse at 90% 100%, #3a7024 0%, #3a7024 16%, transparent 16%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  .contactTitle {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .treeRow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align trees at the bottom */
+    gap: 4rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px; /* Control the width of the container */
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .contactTree {
+    position: relative;
+    width: 100px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: bottom center;
+    flex: 0 0 auto; /* Prevent trees from growing/shrinking */
+  }
+  
+  .contactTrunk {
+    width: 20px;
+    height: 80px;
+    background: linear-gradient(to right, #3b2f2f 0%, #5d4037 50%, #3b2f2f 100%);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px; /* Create space for the leaves above */
+  }
+  
+  .contactBranch {
+    position: absolute;
+    background: #3b2f2f;
+    height: 5px;
+    border-radius: 2px;
+    transform-origin: left center;
+  }
+  
+  .branch1 {
+    width: 20px;
+    top: 20px;
+    right: -15px;
+    transform: rotate(30deg);
+  }
+  
+  .branch2 {
+    width: 15px;
+    top: 40px;
+    left: -12px;
+    transform: rotate(-40deg);
+  }
+  
+  .contactLeaves {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%); /* Center alignment correction */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: hsl(120deg, 80%, 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: gentleBounce 4s infinite ease-in-out;
+    text-decoration: none;
+    z-index: 2; /* Ensure leaves appear above trunk */
+  }
+  
+  .contactLeaves:hover {
+    background: hsl(120deg, 80%, 70%);
+    transform: translateX(-50%) scale(1.1);
+  }
+  
+  .contactIcon {
+    font-size: 2rem;
+    color: white;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  }
+  
+  @keyframes gentleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .contactMessage {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .bioContainer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .avatarContainer {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .timelineCard {
+      width: 85%;
+      left: 0 !important;
+    }
+  
+    .timelinePath::after {
+      left: 20px;
+    }
+  
+    .timelineDot {
+      left: 3px !important;
+    }
+  
+    .sun {
+      width: 60px;
+      height: 60px;
+      top: 40px;
+      right: 40px;
+    }
+  
+    .aboutTitle {
+      font-size: 2.5rem;
+    }
+    
+    .aboutMeSection {
+      padding-bottom: 100vh;
+    }
+  }
+  @media (max-width: 768px) {
+    .treeRow {
+      gap: 2rem;
+      flex-wrap: nowrap; /* Keep trees in a row even on mobile */
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+    
+    .contactTree {
+      width: 80px; /* Slightly smaller on mobile */
+    }
+    
+    .contactLeaves {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .contactIcon {
+      font-size: 1.5rem;
+    }
+  }
